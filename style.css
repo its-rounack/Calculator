@@ -1,0 +1,118 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+    .styled_text {
+        position: absolute;
+        top: 150px;
+        left: 42.5%;
+        font-size: 24px;     
+        font-weight: bold;       
+        color: #ff5733;          
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+        background-color: #f0f0f0;
+        padding: 8px 15px;       
+        border-radius: 10px;      
+        display: inline-block;    
+        border: 2px solid #ff5733; 
+        transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    }
+    
+    .styled_text:hover {
+        background-color: #ff5733;
+        color: white;
+        transform: scale(1.1);
+    }
+    
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #2d71d8, #0e3ca8);
+}
+
+.calculator {
+    width: 320px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 2em;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Proper Grid Layout */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    width: 100%;
+    height: 60px;
+    font-size: 1.5em;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Special Button Styles */
+.operator {
+    background: rgba(192, 132, 36, 0.7);
+}
+
+.operator:hover {
+    background: rgba(76, 195, 55, 0.9);
+}
+
+/* Equals Button Spans 2 Columns */
+.equal {
+    background: rgba(100, 255, 100, 0.7);
+    grid-column: span 1;
+}
+
+.equal:hover {
+    background: rgba(100, 255, 100, 0.9);
+}
+
+/* Zero Button Spans 2 Columns */
+.zero {
+    grid-column: span 2;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        width: 90%;
+    }
+}
